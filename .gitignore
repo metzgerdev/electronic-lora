@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.DS_Store
+
+# audio: copyrighted commercial tracks — never commit
+dataset/audio/*
+!dataset/audio/.gitkeep
+vae_roundtrip_out/
+
+# generated/stale artifacts
+*.bak
+*.log
+dataset/review_sheet.xlsx
+.gstack/

@@ -1,0 +1,458 @@
+{
+  "ACRAZE - Take Me Away (Extended Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "Ab major",
+    "sub_ratio": 0.037699997425079346,
+    "centroid": 2588.5139124380025,
+    "rms_var": 0.7449823021888733,
+    "onset_rate": 4.1
+  },
+  "Alesso - Hypnotize (Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "G minor",
+    "sub_ratio": 0.18763577938079834,
+    "centroid": 2301.0278434905804,
+    "rms_var": 0.26155373454093933,
+    "onset_rate": 7.066666666666666
+  },
+  "Alex Wann - Milkshake (Original Mix).wav": {
+    "tempo_est": 117,
+    "key_est": "D minor",
+    "sub_ratio": 0.07156065106391907,
+    "centroid": 1801.4035139855857,
+    "rms_var": 0.7157944440841675,
+    "onset_rate": 6.233333333333333
+  },
+  "Andruss, HUGEL, Fatboi - Pega (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "Db major",
+    "sub_ratio": 0.17030522227287292,
+    "centroid": 2385.6077011130174,
+    "rms_var": 0.5396616458892822,
+    "onset_rate": 6.733333333333333
+  },
+  "Biscits - Crush  (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.21480673551559448,
+    "centroid": 2223.5692806041443,
+    "rms_var": 0.5719156265258789,
+    "onset_rate": 4.066666666666666
+  },
+  "Biscits - Freak  (Extended Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "B minor",
+    "sub_ratio": 0.12828004360198975,
+    "centroid": 2802.420941022479,
+    "rms_var": 0.4889775216579437,
+    "onset_rate": 5.5
+  },
+  "Biscits - Selecta (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F major",
+    "sub_ratio": 0.21131038665771484,
+    "centroid": 2604.567479172263,
+    "rms_var": 0.6242039203643799,
+    "onset_rate": 5.633333333333334
+  },
+  "Borai & Denham Audio - Make Me (Franky Rizardo Extended Remix).mp3": {
+    "tempo_est": 129,
+    "key_est": "Eb major",
+    "sub_ratio": 0.1889260709285736,
+    "centroid": 3028.968539310478,
+    "rms_var": 0.4198600649833679,
+    "onset_rate": 6.15
+  },
+  "Bruno Furlan - Bongoloco (Original Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "F# minor",
+    "sub_ratio": 0.12481454014778137,
+    "centroid": 2741.6397064503767,
+    "rms_var": 1.1925134658813477,
+    "onset_rate": 5.733333333333333
+  },
+  "CID, BURNR - Turn it Up (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.152214914560318,
+    "centroid": 2844.096531550182,
+    "rms_var": 0.6219300627708435,
+    "onset_rate": 6.0
+  },
+  "CamelPhat - Drop It (Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "E minor",
+    "sub_ratio": 0.16210581362247467,
+    "centroid": 3279.7420951566132,
+    "rms_var": 0.4419770836830139,
+    "onset_rate": 6.033333333333333
+  },
+  "Chelina Manuhutu - All On You (Extended Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "Ab minor",
+    "sub_ratio": 0.23761199414730072,
+    "centroid": 3134.2959696616263,
+    "rms_var": 0.3374795913696289,
+    "onset_rate": 7.616666666666666
+  },
+  "Chelina Manuhutu - Big G (Original Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "A minor",
+    "sub_ratio": 0.18770815432071686,
+    "centroid": 3514.1317581277867,
+    "rms_var": 0.3922273814678192,
+    "onset_rate": 6.966666666666667
+  },
+  "Chris Lorenzo - Pump (Extended Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "E minor",
+    "sub_ratio": 0.22356098890304565,
+    "centroid": 2219.641165116599,
+    "rms_var": 0.31250447034835815,
+    "onset_rate": 5.283333333333333
+  },
+  "Cloonee - Fine Night (Original Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.3362100124359131,
+    "centroid": 2528.1936871434086,
+    "rms_var": 0.6432930827140808,
+    "onset_rate": 4.083333333333333
+  },
+  "Dateless - Shoes On Please (Original Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "F# minor",
+    "sub_ratio": 0.31981566548347473,
+    "centroid": 2317.80315407712,
+    "rms_var": 0.5752267241477966,
+    "onset_rate": 5.816666666666666
+  },
+  "David Amo, Julio Navas, Gustavo Bravetti - Raw (Tony Romera Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.14182722568511963,
+    "centroid": 2725.6279156142605,
+    "rms_var": 0.4549669921398163,
+    "onset_rate": 6.75
+  },
+  "Dusky - Careless (Original Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "G minor",
+    "sub_ratio": 0.10059167444705963,
+    "centroid": 3157.2169261751087,
+    "rms_var": 0.586077868938446,
+    "onset_rate": 5.383333333333334
+  },
+  "FISHER (OZ) - You Little Beauty (Extended).wav": {
+    "tempo_est": 123,
+    "key_est": "Bb major",
+    "sub_ratio": 0.1288556158542633,
+    "centroid": 2661.614711266716,
+    "rms_var": 0.456413596868515,
+    "onset_rate": 3.4833333333333334
+  },
+  "FM STROEMER - Morning Light (Future Funk Remix).wav": {
+    "tempo_est": 123,
+    "key_est": "A minor",
+    "sub_ratio": 0.05688992515206337,
+    "centroid": 3185.5264796067627,
+    "rms_var": 0.26299744844436646,
+    "onset_rate": 3.716666666666667
+  },
+  "Finn - Sometimes The Going Gets A Little Tough (Ferreck Dawn & Robosonic Extended Remix).mp3": {
+    "tempo_est": 123,
+    "key_est": "Bb major",
+    "sub_ratio": 0.10881003737449646,
+    "centroid": 3313.194978105577,
+    "rms_var": 0.5360369086265564,
+    "onset_rate": 5.066666666666666
+  },
+  "Flashmob - Hardbase & Bassline (Original Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "E minor",
+    "sub_ratio": 0.15408967435359955,
+    "centroid": 2986.929611938978,
+    "rms_var": 0.586061418056488,
+    "onset_rate": 6.383333333333334
+  },
+  "Gorgon City - Primal Call (Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "A minor",
+    "sub_ratio": 0.13916203379631042,
+    "centroid": 3164.6444700465618,
+    "rms_var": 0.3382529616355896,
+    "onset_rate": 6.433333333333334
+  },
+  "Green Velvet, Chris Lake - Deceiver (VIP) (Extended Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "Eb major",
+    "sub_ratio": 0.14448946714401245,
+    "centroid": 2545.389894729191,
+    "rms_var": 0.3724416196346283,
+    "onset_rate": 4.3
+  },
+  "Hatiras - Spaced Invader (Original Mix).mp3": {
+    "tempo_est": 136,
+    "key_est": "E major",
+    "sub_ratio": 0.06269470602273941,
+    "centroid": 3642.4627745952776,
+    "rms_var": 0.2754702866077423,
+    "onset_rate": 4.3
+  },
+  "John Summit - In Chicago (Extended Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "D minor",
+    "sub_ratio": 0.22649052739143372,
+    "centroid": 1984.2320605038515,
+    "rms_var": 0.5000951290130615,
+    "onset_rate": 4.55
+  },
+  "John Summit - La Danza (Extended Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "Db major",
+    "sub_ratio": 0.2094840258359909,
+    "centroid": 2401.274891622691,
+    "rms_var": 0.4690227508544922,
+    "onset_rate": 4.466666666666667
+  },
+  "John Summit - Make Me Feel (Original Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "C minor",
+    "sub_ratio": 0.2529146671295166,
+    "centroid": 2634.7248339822418,
+    "rms_var": 0.4924786686897278,
+    "onset_rate": 4.9
+  },
+  "Laidback Luke, BLVD. - Cielo (Original Mix).wav": {
+    "tempo_est": 123,
+    "key_est": "Ab major",
+    "sub_ratio": 0.22018024325370789,
+    "centroid": 2688.993428571889,
+    "rms_var": 0.6727460622787476,
+    "onset_rate": 4.683333333333334
+  },
+  "MD X-Spress - God Made Me Phunky (Original Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.24061477184295654,
+    "centroid": 2829.121227363697,
+    "rms_var": 0.30596068501472473,
+    "onset_rate": 5.5
+  },
+  "Martin Ikin - Hustlin_ (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F# minor",
+    "sub_ratio": 0.14419248700141907,
+    "centroid": 2258.5250305850377,
+    "rms_var": 0.5095071792602539,
+    "onset_rate": 5.016666666666667
+  },
+  "Martin Ikin, Noizu - Burnin_ (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.18952713906764984,
+    "centroid": 2574.4112072758485,
+    "rms_var": 0.5496155619621277,
+    "onset_rate": 5.15
+  },
+  "Matroda - Naughty Sax (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "E minor",
+    "sub_ratio": 0.265095055103302,
+    "centroid": 2373.4482293274477,
+    "rms_var": 0.39289921522140503,
+    "onset_rate": 5.933333333333334
+  },
+  "Matroda, TEKO - When The Bass Kicks In (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "G minor",
+    "sub_ratio": 0.08178242295980453,
+    "centroid": 3027.5509423524777,
+    "rms_var": 0.825286328792572,
+    "onset_rate": 3.2333333333333334
+  },
+  "Matteo Dentone - People (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "G minor",
+    "sub_ratio": 0.21855372190475464,
+    "centroid": 2495.839863069932,
+    "rms_var": 0.4742004871368408,
+    "onset_rate": 5.75
+  },
+  "Mau P - MERTHER (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.2103782445192337,
+    "centroid": 3041.0963565091115,
+    "rms_var": 0.40187138319015503,
+    "onset_rate": 5.933333333333334
+  },
+  "Max Dean, Luke Dean, Locky (UK) - Can_t Decide (Extended).mp3": {
+    "tempo_est": 129,
+    "key_est": "Ab major",
+    "sub_ratio": 0.26602351665496826,
+    "centroid": 2238.089691618283,
+    "rms_var": 0.5994515419006348,
+    "onset_rate": 6.083333333333333
+  },
+  "Max Styler - Lights Out (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F# major",
+    "sub_ratio": 0.06803393363952637,
+    "centroid": 2698.3231109384797,
+    "rms_var": 0.5984997153282166,
+    "onset_rate": 7.45
+  },
+  "Mochakk - Jealous (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "Ab major",
+    "sub_ratio": 0.1845341920852661,
+    "centroid": 2951.8789369827373,
+    "rms_var": 0.4045509397983551,
+    "onset_rate": 5.983333333333333
+  },
+  "NESI (ES) - This Time (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F minor",
+    "sub_ratio": 0.10723736882209778,
+    "centroid": 2491.1730857135094,
+    "rms_var": 0.5688468217849731,
+    "onset_rate": 5.666666666666667
+  },
+  "Odd Mob - XTC (Extended Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "Eb major",
+    "sub_ratio": 0.1547321379184723,
+    "centroid": 2985.231504995526,
+    "rms_var": 0.49747028946876526,
+    "onset_rate": 5.033333333333333
+  },
+  "Odd Mob, OMNOM - Losing Control (Extended Mix).mp3": {
+    "tempo_est": 136,
+    "key_est": "G major",
+    "sub_ratio": 0.14990149438381195,
+    "centroid": 1621.7987606481763,
+    "rms_var": 0.4637606739997864,
+    "onset_rate": 3.3
+  },
+  "Overmono - Is U (Original Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "G minor",
+    "sub_ratio": 0.11509039252996445,
+    "centroid": 2225.8498485053315,
+    "rms_var": 0.2480899691581726,
+    "onset_rate": 4.15
+  },
+  "Prok & Fitch, SOSA (UK) - Dance Lapse (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F# minor",
+    "sub_ratio": 0.1894323229789734,
+    "centroid": 2648.7107010926065,
+    "rms_var": 0.6376092433929443,
+    "onset_rate": 3.8666666666666667
+  },
+  "Riordan - Needle On The Record (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F# major",
+    "sub_ratio": 0.19826841354370117,
+    "centroid": 2361.084166513497,
+    "rms_var": 0.8932889103889465,
+    "onset_rate": 5.5
+  },
+  "SOSA (UK) - Bring It Back (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F major",
+    "sub_ratio": 0.14934512972831726,
+    "centroid": 2971.685928786041,
+    "rms_var": 0.6429581642150879,
+    "onset_rate": 4.566666666666666
+  },
+  "Solardo - On the Corner (Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "Eb minor",
+    "sub_ratio": 0.09689033031463623,
+    "centroid": 2440.107714942872,
+    "rms_var": 0.4575583040714264,
+    "onset_rate": 3.8833333333333333
+  },
+  "Solardo, Joshwa - Slow Down (Extended).mp3": {
+    "tempo_est": 129,
+    "key_est": "A minor",
+    "sub_ratio": 0.07075193524360657,
+    "centroid": 3179.625255412093,
+    "rms_var": 0.5558549165725708,
+    "onset_rate": 5.516666666666667
+  },
+  "Solardo, Joshwa - VIP Business (Original Mix).wav": {
+    "tempo_est": 129,
+    "key_est": "Bb major",
+    "sub_ratio": 0.10268693417310715,
+    "centroid": 2675.0771396936266,
+    "rms_var": 0.48074784874916077,
+    "onset_rate": 5.216666666666667
+  },
+  "Taiki Nulight - Hold On (Original Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "D minor",
+    "sub_ratio": 0.17102332413196564,
+    "centroid": 3205.3327427976324,
+    "rms_var": 0.7094565629959106,
+    "onset_rate": 4.233333333333333
+  },
+  "Taiki Nulight, Rennan, Almek - Ruh (Taiki Nulight Afterhours Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "D minor",
+    "sub_ratio": 0.16357336938381195,
+    "centroid": 2508.185444582814,
+    "rms_var": 0.5635278224945068,
+    "onset_rate": 5.8
+  },
+  "Toman - Backstage Beauties  (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "Eb major",
+    "sub_ratio": 0.24394848942756653,
+    "centroid": 2482.29886235076,
+    "rms_var": 0.3721098005771637,
+    "onset_rate": 4.783333333333333
+  },
+  "Tony Romera, Low Steppa - Dance To The Music (Extended Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "D major",
+    "sub_ratio": 0.11517622321844101,
+    "centroid": 3471.35087719999,
+    "rms_var": 0.617699146270752,
+    "onset_rate": 5.9
+  },
+  "Vato Gonzalez - Gypsy Riddim (Extended Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "F major",
+    "sub_ratio": 0.17433537542819977,
+    "centroid": 2645.1816232162814,
+    "rms_var": 0.2475215047597885,
+    "onset_rate": 5.166666666666667
+  },
+  "Wuez - Blow Ya Mind (Original Mix).mp3": {
+    "tempo_est": 129,
+    "key_est": "Eb major",
+    "sub_ratio": 0.1629389077425003,
+    "centroid": 3539.5264662838736,
+    "rms_var": 0.6257644891738892,
+    "onset_rate": 6.1
+  },
+  "Yousef - Beg (Hot Since 82 Future Mix).mp3": {
+    "tempo_est": 123,
+    "key_est": "E minor",
+    "sub_ratio": 0.06950029730796814,
+    "centroid": 3011.5964662581996,
+    "rms_var": 0.4888896644115448,
+    "onset_rate": 4.5
+  },
+  "warner case - miss me (Club Edit).mp3": {
+    "tempo_est": 123,
+    "key_est": "A minor",
+    "sub_ratio": 0.2119159996509552,
+    "centroid": 2546.8290134857834,
+    "rms_var": 0.627506673336029,
+    "onset_rate": 5.916666666666667
+  }
+}

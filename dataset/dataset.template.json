@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "electronic_lora_v1",
+    "custom_tag": "zynarai",
+    "tag_position": "prepend",
+    "created_at": "2026-07-08T00:00:00.000000",
+    "num_samples": 1,
+    "all_instrumental": false,
+    "genre_ratio": 90
+  },
+  "samples": [
+    {
+      "id": "0001",
+      "audio_path": "./audio/example_track.wav",
+      "filename": "example_track.wav",
+      "caption": "Driving melodic techno with a rolling bassline, airy analog pads, and hypnotic arpeggios building into a filtered peak",
+      "genre": "Melodic Techno",
+      "lyrics": "[Instrumental]",
+      "raw_lyrics": "",
+      "formatted_lyrics": "",
+      "bpm": 124,
+      "keyscale": "A minor",
+      "timesignature": "4",
+      "duration": 360,
+      "language": "en",
+      "is_instrumental": true,
+      "custom_tag": "zynarai",
+      "labeled": true,
+      "prompt_override": null
+    }
+  ]
+}

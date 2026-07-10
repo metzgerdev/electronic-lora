@@ -1,0 +1,151 @@
+{
+  "name": "electronic_lora_v1_core",
+  "description": "Controlled caption vocabulary \u2014 see VOCABULARY.md for rules and rubrics. Slot order = clause order in the caption.",
+  "slots": [
+    {
+      "id": "energy",
+      "label": "Energy (BPM-derived: driving >=126)",
+      "select": "one",
+      "required": true,
+      "join": "space",
+      "options": [
+        "driving",
+        "groovy"
+      ]
+    },
+    {
+      "id": "genre",
+      "label": "Genre",
+      "select": "one",
+      "required": true,
+      "options": [
+        "tech house",
+        "house",
+        "bass house",
+        "deep house",
+        "funky house",
+        "deep tech house",
+        "minimal house"
+      ]
+    },
+    {
+      "id": "bass",
+      "label": "Bass character",
+      "select": "many",
+      "options": [
+        "bouncy bassline groove",
+        "gritty bassline pressure",
+        "rolling bassline",
+        "brooding reese bassline",
+        "rubbery bass stabs",
+        "wubby fm bass",
+        "chunky wobbling bassline"
+      ]
+    },
+    {
+      "id": "synths",
+      "label": "Synths / leads",
+      "select": "many",
+      "options": [
+        "big-room synth leads",
+        "warm analog pads",
+        "hypnotic minor-key arps",
+        "dark stabs",
+        "airy pads",
+        "vibey chords",
+        "soulful R&B-tinged chords"
+      ]
+    },
+    {
+      "id": "percussion",
+      "label": "Percussion texture",
+      "select": "many",
+      "options": [
+        "punchy drums",
+        "shuffled hats",
+        "latin percussion groove",
+        "dusty percussion loops"
+      ]
+    },
+    {
+      "id": "mood",
+      "label": "Mood / energy",
+      "select": "many",
+      "options": [
+        "late-night energy",
+        "peak-time energy",
+        "day party groove",
+        "hypnotic",
+        "brooding dark atmosphere",
+        "tough UK club energy"
+      ]
+    },
+    {
+      "id": "scene",
+      "label": "Scene (gestalt only \u2014 most tracks stay silent)",
+      "select": "one",
+      "options": [
+        "underground warehouse energy",
+        "mainstage festival energy"
+      ]
+    },
+    {
+      "id": "production",
+      "label": "Production",
+      "select": "many",
+      "options": [
+        "clean modern club mix",
+        "raw analog saturation"
+      ]
+    },
+    {
+      "id": "dynamics",
+      "label": "Dynamics (quartile axis)",
+      "select": "one",
+      "options": [
+        "dramatic builds and drops",
+        "steady rolling groove"
+      ]
+    },
+    {
+      "id": "brightness",
+      "label": "Brightness (quartile axis)",
+      "select": "one",
+      "options": [
+        "bright crisp top end",
+        "dark moody tone"
+      ]
+    },
+    {
+      "id": "perc_density",
+      "label": "Percussion density (quartile axis)",
+      "select": "one",
+      "options": [
+        "busy layered percussion",
+        "stripped-back minimal drums"
+      ]
+    },
+    {
+      "id": "low_end",
+      "label": "Low end (quartile axis)",
+      "select": "one",
+      "options": [
+        "weighty sub-heavy low end",
+        "weighty kick-driven low end",
+        "lean tight low end"
+      ]
+    },
+    {
+      "id": "vocal",
+      "label": "Vocal ending (required, exactly one)",
+      "select": "one",
+      "required": true,
+      "options": [
+        "instrumental club track",
+        "sparse chopped vocal hooks",
+        "chopped R&B vocal hooks"
+      ]
+    }
+  ],
+  "custom_after": "production"
+}
