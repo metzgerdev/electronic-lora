@@ -114,3 +114,31 @@ halves wall-clock at similar total cost.)
   dataset.json). Training: Colab Pro L4 via notebooks/colab_train_lokr.ipynb
   (LoKr dim64/alpha128 + DoRA, LR 0.03, 100 epochs per Side-Step guidance
   for 50+ songs, batch 2, checkpoints -> Drive every 10 epochs).
+- 2026-07-11: First live Colab run. Notebook hardened through a chain of
+  environment gotchas (all fixed in colab_train_lokr.ipynb):
+  * flash-attn: removed — its unconditional linux entry in requirements.txt
+    compiles from source (20-40 min hang). Cell 3 now filters requirements.txt
+    to strip flash-attn + torch pins (keeps Colab's torch 2.11), SDPA fallback.
+  * Missing deps not in requirements resolution: loguru, lycoris-lora,
+    vector_quantize_pytorch installed explicitly in cell 3.
+  * Meta-tensor bug: newer transformers instantiates trust_remote_code models
+    on 'meta' device; vector_quantize_pytorch's ResidualFSQ asserts on tensor
+    values in __init__ (illegal on meta). Cell 3b guards those asserts +
+    forces low_cpu_mem_usage=False. Do NOT pin transformers older — the model
+    code imports layer_type_validation (newer-only).
+  * Drive path 'lora fine tune' has a space: cell 2 symlinks it to
+    /content/loradrive; all subprocess calls pass paths as list args.
+  * safe_path guard: trainer's path_safety sets safe root = cwd at import and
+    rejects paths outside it. Run subprocess with cwd='/content' (Drive mounts
+    under /content) + absolute train.py path so Drive tensors/output pass.
+  * --yes flag required: subprocess has no stdin; the 'Start training?' prompt
+    otherwise EOFs and aborts cleanly (returncode 0, no training).
+  * Two-pass preprocess: Pass 1 writes <name>.tmp.pt, Pass 2 finalizes .pt.
+    Earlier Pass-2 failures left 57 .tmp.pt orphans; the old cache-guard
+    (any-file-exists) then skipped preprocessing forever, and the loader
+    (globs *.pt, matches .tmp.pt) trained on incomplete intermediates in 39s.
+    Cell 6 now counts only finished .pt (excludes .tmp.pt) and clears orphans.
+  Training confirmed running end-to-end after these fixes.
+  Known: LoKr dim64 + factor -1 triggers LyCORIS 'full matrix mode'
+  (~1.08M trainable params, 0.05%) instead of tight Kronecker — fine for v1;
+  for v2 use lower dim or explicit --lokr-factor to get the compact form.
