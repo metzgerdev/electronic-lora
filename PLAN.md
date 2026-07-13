@@ -142,3 +142,24 @@ halves wall-clock at similar total cost.)
   Known: LoKr dim64 + factor -1 triggers LyCORIS 'full matrix mode'
   (~1.08M trainable params, 0.05%) instead of tight Kronecker — fine for v1;
   for v2 use lower dim or explicit --lokr-factor to get the compact form.
+- 2026-07-12: DiT LoRA evaluated (Gradio, base model, 50 steps/shift 1.0, 5Hz LM
+  ON). Result: adapter transfers PRODUCTION character (sub-bass weight, loudness/
+  density of the commercial masters) but NOT composition — arrangement doesn't
+  read as the training tracks. This is architecturally correct: the LoRA is on the
+  DiT *renderer* (timbre/texture), while composition lives in the 5Hz LM *planner*,
+  which was untrained. Inference gotchas found: base needs 50 steps/shift 1.0 (not
+  turbo 8/3.0 → garbled); the LoKr adapter must be LOADED via the button (not just
+  toggled) or it silently no-ops (`no _lycoris_net`); 5Hz LM must be initialized or
+  output is undefined/sloppy. Best DiT checkpoint so far: epoch_90; usable multiplier
+  ~0.5 (1.0 clips to peak 1.0).
+- 2026-07-12: Started LM-planner fine-tuning workstream to transfer composition.
+  Finding: repo has NO LM training path (training_v2/training are DiT-only), but the
+  5Hz LM is a vanilla Qwen3 CausalLM emitting `<|audio_code_N|>` tokens, so standard
+  PEFT LoRA + SFT applies. Data extractor exists: handler.convert_src_audio_to_codes
+  (audio -> code string). Built: scripts/lm_sft_prep.py (chunking + prompt format
+  matched to inference) and notebooks/colab_train_lm_lora.ipynb (Qwen3 0.6B, ~30s
+  chunks -> ~350-450 examples, LoRA r16, 3 epochs, completion-only loss). Config:
+  0.6B LM + 30s chunks (per decisions). RISKS to watch: (1) 57 tracks is thin for
+  LM SFT — chunking mitigates but overfit likely, watch eval loss; (2) prompt/chat
+  template must match inference exactly — cell 5 round-trips one chunk to verify
+  before full extraction. Inference will load BOTH adapters (DiT sound + LM grooves).
