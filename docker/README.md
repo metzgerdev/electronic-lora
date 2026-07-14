@@ -119,6 +119,50 @@ docker rm -f lokr
 Then **terminate the instance** from the Lambda dashboard. The persistent
 filesystem keeps your checkpoints for the next session; the GPU meter stops.
 
+## Run on RunPod (container-first)
+
+RunPod pulls your image and runs it — you don't build on the pod. So the flow is
+**push image → seed a network volume → launch an A100 pod from the image**.
+
+**1. Build + push the image** (from a machine with Docker; the image holds no
+secrets/data, so a public repo is fine):
+
+```bash
+docker login docker.io                      # or ghcr.io
+./docker/push.sh docker.io/<user>/electronic-lora-train:v1
+```
+
+**2. Create a Network Volume** (RunPod → Storage) in a region with A100 stock,
+~100 GB (holds checkpoints + tensors + dataset). It mounts at `/workspace`.
+
+**3. Seed the dataset onto the volume.** Launch any cheap pod with the volume
+attached, then from your Mac:
+
+```bash
+rsync -avP dataset/ root@<POD_IP>:/workspace/dataset/     # or rclone from Drive
+```
+
+Terminate that pod — the volume (and your data) persist.
+
+**4. Launch the A100 pod** from your image:
+
+- **Container Image:** `docker.io/<user>/electronic-lora-train:v1`
+- **Network Volume:** attached at `/workspace`
+- **GPU:** 1× A100 (80 GB preferred)
+- **Environment variables:** `WANDB_API_KEY=...`, `EPOCHS=5` (smoke test),
+  `VARIANT=xl_base` (+ any knob from `train.env.example`)
+
+The image's entrypoint runs the smoke test on start. Watch **Pod logs** and the
+**W&B run URL** it prints. The container exits when the 5 epochs finish (that's
+expected for a one-shot job) — read the result, then **terminate the pod**; the
+volume keeps your checkpoints for the full run.
+
+> Tip: for interactive debugging, override the pod's command with `sleep infinity`,
+> open RunPod's web terminal, and run `/opt/entrypoint.sh` by hand.
+
+The same image runs unchanged on Vast.ai, Modal, or any `--gpus all` host — only
+the "where do I launch it" step differs.
+
 ## Notes
 
 - **Pinning:** the image is fixed to `ACESTEP_REF` in the Dockerfile (the commit
