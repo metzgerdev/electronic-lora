@@ -10,5 +10,6 @@ vae_roundtrip_out/
 # generated/stale artifacts
 *.bak
 *.log
+*.zip
 dataset/review_sheet.xlsx
 .gstack/
