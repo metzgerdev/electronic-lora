@@ -13,3 +13,7 @@ vae_roundtrip_out/
 *.zip
 dataset/review_sheet.xlsx
 .gstack/
+
+# training secrets — never commit the filled-in env (keep the .example)
+docker/train.env
+train.env

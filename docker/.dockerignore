@@ -1,0 +1,6 @@
+# Build context is docker/ only — keep it tiny. The image clones ACE-Step-1.5
+# itself and the dataset/checkpoints are bind-mounted at run time, never baked in.
+train.env
+*.pt
+*.zip
+__pycache__/
