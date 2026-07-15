@@ -78,6 +78,13 @@ else
     echo "[download] $DIT_DIR present — skipping."
 fi
 
+# ACE-Step's training-path validation (cli/args.VARIANT_DIR_MAP) is missing the
+# XL variants, so it resolves the model dir by the literal variant name. Symlink
+# '<variant>' -> 'acestep-v15-<variant>' so validation finds it (no-op for
+# variants already in that map).
+ln -sfn "$DIT_DIR" "$CKPT/$VARIANT"
+echo "[checkpoints] $VARIANT -> $DIT_DIR"
+
 # ---- 2. preprocess (per-variant tensors; skip if finished .pt exist) --------
 FINISHED=$(find "$TENSORS" -name '*.pt' ! -name '*.tmp.pt' | wc -l | tr -d ' ')
 if [[ "$FINISHED" -gt 0 ]]; then
