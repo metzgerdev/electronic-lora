@@ -2,7 +2,7 @@
 # =============================================================================
 # electronic-lora training entrypoint (headless, disconnect-safe).
 #
-# Orchestrates one professional training run inside the pinned image:
+# Orchestrates one training run inside the pinned image:
 #   1. GPU sanity   2. resolve paths   3. download checkpoints (cached)
 #   4. preprocess (cached, per-variant)   5. tracked LoKr training (W&B)
 #
@@ -42,7 +42,7 @@ echo " electronic-lora training"
 echo " variant=$VARIANT  epochs=$EPOCHS  lr=$LR  batch=$BATCH accum=$ACCUM"
 echo " ACE-Step ref: $(cat /app/.acestep_ref 2>/dev/null || echo unknown)"
 echo "-------------------------------------------------------------------"
-uv run --project /app python - <<'PY'
+python - <<'PY'
 import torch
 print("torch      :", torch.__version__)
 ok = torch.cuda.is_available()
@@ -66,7 +66,7 @@ export WANDB_RUN_NAME="${WANDB_RUN_NAME:-lokr-${VARIANT}-e${EPOCHS}}"
 # ---- 1. download checkpoints (cached; skip if present) ----------------------
 if [[ ! -d "$CKPT/$DIT_DIR" || -z "$(ls -A "$CKPT/$DIT_DIR" 2>/dev/null)" ]]; then
     echo "[download] base snapshot + DiT variant $DIT_DIR ..."
-    CKPT="$CKPT" DIT_DIR="$DIT_DIR" uv run --project /app python - <<'PY'
+    CKPT="$CKPT" DIT_DIR="$DIT_DIR" python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
 ckpt, dit = os.environ["CKPT"], os.environ["DIT_DIR"]
@@ -85,7 +85,7 @@ if [[ "$FINISHED" -gt 0 ]]; then
 else
     echo "[preprocess] running Pass-1/2 for variant=$VARIANT ..."
     find "$TENSORS" -name '*.tmp.pt' -delete 2>/dev/null || true
-    uv run --project /app python /app/train.py fixed \
+    python /app/train.py fixed \
         --checkpoint-dir "$CKPT" \
         --model-variant "$VARIANT" \
         --dataset-dir "$TENSORS" \
@@ -133,7 +133,7 @@ export TRAIN_ARGV VARIANT OUTPUT_DIR="$OUTPUT" WORKDIR
 
 echo "[train] launching (W&B mode=${WANDB_MODE:-online}) ..."
 echo "[train] argv: $TRAIN_ARGV"
-uv run --project /app python /opt/wandb_launch.py
+python /opt/wandb_launch.py
 
 echo "[done] adapter in: $OUTPUT"
 echo "[done] tensorboard logs: $OUTPUT/runs"

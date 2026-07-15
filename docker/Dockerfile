@@ -50,18 +50,22 @@ WORKDIR /app
 # ---- project deps from the lockfile (reproducible) ----
 RUN uv sync --frozen --no-dev --python python3.11
 
-# ---- training-only deps not in the inference lockfile ----
-# (loguru / lycoris-lora / vector_quantize_pytorch were installed ad hoc in the
-#  Colab notebook; wandb + tensorboard drive experiment tracking.)
-RUN uv pip install \
+# Put the built venv on PATH so runtime uses it directly. This is deliberate:
+# `uv run` re-checks/syncs the lockfile at invocation, which drags in ACE-Step's
+# flash-attn (a Windows wheel URL) and needs network — the image is already
+# built, so runtime must not touch uv or the network.
+ENV VIRTUAL_ENV=/app/.venv
+ENV PATH="/app/.venv/bin:${PATH}"
+
+# ---- training-only deps not in the lockfile, installed into the venv ----
+RUN uv pip install --python "$VIRTUAL_ENV/bin/python" \
         "wandb>=0.17" "tensorboard>=2.16" \
         loguru lycoris-lora vector_quantize_pytorch hf_transfer
 
 # ---- bake the two runtime patches (meta-tensor guard + model_loader) ----
-# These were live-patched every Colab session; here they are permanent and
-# deterministic because ACESTEP_REF and the dep versions are pinned.
+# Deterministic because ACESTEP_REF and the dep versions are pinned.
 COPY apply_patches.py /opt/apply_patches.py
-RUN uv run python /opt/apply_patches.py --verify
+RUN python /opt/apply_patches.py --verify
 
 # ---- training launcher + entrypoint ----
 COPY wandb_launch.py /opt/wandb_launch.py
